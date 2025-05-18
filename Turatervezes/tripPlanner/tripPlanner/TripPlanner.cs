@@ -154,6 +154,7 @@ namespace tripPlanner
             BubbleEvent = true;
             SAPbouiCOM.Form oForm = null;
             
+
             try
             {
                 if (pVal.EventType == BoEventTypes.et_FORM_UNLOAD || pVal.EventType == BoEventTypes.et_FORM_DEACTIVATE || pVal.EventType == BoEventTypes.et_FORM_CLOSE)
@@ -218,7 +219,7 @@ namespace tripPlanner
         {
             try
             {
-                SAPbouiCOM.DataTable oDT;
+                SAPbouiCOM.DataTable oDT = null; ;
 
                 SAPbobsCOM.GeneralService oGeneralService = null;
                 SAPbobsCOM.GeneralData oGeneralData = null;
@@ -369,6 +370,11 @@ namespace tripPlanner
                         $"carcap: {cap}, tour: {tour}, rows loaded",
                         BoMessageTime.bmt_Short, BoStatusBarMessageType.smt_Success);
                 }
+                else
+                {
+                    matrix.CommonSetting.SetRowBackColor(i + 1, -1 );
+
+                }
 
             }
         }
@@ -401,6 +407,7 @@ namespace tripPlanner
                 oDT.Rows.Clear();
                 for (int i = 0; i < oRs.RecordCount; i++)
                 {
+
                     oDT.Rows.Add();
                     docEntries[i] = oRs.Fields.Item("docEntry").Value;
                     oDT.Columns.Item("db_ordid").Cells.Item(i).Value = oRs.Fields.Item("order_id").Value;
@@ -425,7 +432,7 @@ namespace tripPlanner
                 SAPbouiCOM.Item gridItem = oForm.Items.Item("Item_7");
                 SAPbouiCOM.Matrix matrix = (SAPbouiCOM.Matrix)gridItem.Specific;
                 matrix.AutoResizeColumns();
-
+                
                 matrix.LoadFromDataSource();
                 checkIfOverLimit(oDT, matrix);
 
