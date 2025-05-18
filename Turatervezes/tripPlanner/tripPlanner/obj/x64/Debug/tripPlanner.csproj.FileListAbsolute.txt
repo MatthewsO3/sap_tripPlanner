@@ -1,4 +1,3 @@
-D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\obj\x64\Debug\tripPlanner.csproj.AssemblyReference.cache
 D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\obj\x64\Debug\Interop.SAPbobsCOM.dll
 D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\obj\x64\Debug\Interop.SAPbouiCOM.dll
 D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\obj\x64\Debug\tripPlanner.csproj.ResolveComReference.cache
@@ -7,3 +6,4 @@ D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\bin\x64\Debug\tripPlanner.exe
 D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\bin\x64\Debug\tripPlanner.pdb
 D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\obj\x64\Debug\tripPlanner.exe
 D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\obj\x64\Debug\tripPlanner.pdb
+D:\BME\ONLAB\Turatervezes\tripPlanner\tripPlanner\obj\x64\Debug\tripPlanner.csproj.AssemblyReference.cache

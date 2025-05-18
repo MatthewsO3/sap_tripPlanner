@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|d:\\bme\\onlab\\turatervezes\\tripplanner\\tripplanner\\services\\formservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|solutionrelative:tripplanner\\services\\formservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripplanner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|solutionrelative:tripplanner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripplanner\\tripplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|solutionrelative:tripplanner\\tripplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripplanner\\services\\iformservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE6F49A9-D19D-4A4E-97D6-A563BCD0EF66}|tripPlanner\\tripPlanner.csproj|solutionrelative:tripplanner\\services\\iformservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TripPlanner.cs",
+              "DocumentMoniker": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\TripPlanner.cs",
+              "RelativeDocumentMoniker": "tripPlanner\\TripPlanner.cs",
+              "ToolTip": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\TripPlanner.cs",
+              "RelativeToolTip": "tripPlanner\\TripPlanner.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAcwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T06:34:50.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\Program.cs",
+              "RelativeDocumentMoniker": "tripPlanner\\Program.cs",
+              "ToolTip": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\Program.cs",
+              "RelativeToolTip": "tripPlanner\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T06:32:44.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IFormService.cs",
+              "DocumentMoniker": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\Services\\IFormService.cs",
+              "RelativeDocumentMoniker": "tripPlanner\\Services\\IFormService.cs",
+              "ToolTip": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\Services\\IFormService.cs",
+              "RelativeToolTip": "tripPlanner\\Services\\IFormService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T06:32:16.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormService.cs",
+              "DocumentMoniker": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\Services\\FormService.cs",
+              "RelativeDocumentMoniker": "tripPlanner\\Services\\FormService.cs",
+              "ToolTip": "D:\\BME\\ONLAB\\Turatervezes\\tripPlanner\\tripPlanner\\Services\\FormService.cs*",
+              "RelativeToolTip": "tripPlanner\\Services\\FormService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAACdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T06:32:02.198Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
