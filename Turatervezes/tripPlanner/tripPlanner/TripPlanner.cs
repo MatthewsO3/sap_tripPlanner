@@ -14,6 +14,12 @@ namespace tripPlanner
     {
         public static SAPbouiCOM.Application SBO_Application;
         private int[] docEntries = new int[0];
+
+        /// <summary>
+        /// Initializes a new instance of the TripPlanner class, establishing connections to SAP Business One GUI and DI API,
+        /// setting up event handlers, and creating the application menu.
+        /// </summary>
+        /// <exception cref="Exception">Thrown when connection to SAP Business One GUI or DI API fails.</exception>
         public TripPlanner()
         {
             // Az SAP Business One-hoz való kapcsolódás
@@ -75,6 +81,10 @@ namespace tripPlanner
             SBO_Application.ItemEvent += new SAPbouiCOM._IApplicationEvents_ItemEventEventHandler(SBO_Application_ItemEvent);
         }
 
+        /// <summary>
+        /// Creates a custom menu item for TripPlanner under the SAP Business One "Beszerzés" (Procurement) menu.
+        /// </summary>
+        /// <exception cref="Exception">Thrown when menu creation fails.</exception>
         private void createMenu()
         {
             try
@@ -101,6 +111,13 @@ namespace tripPlanner
             }
         }
 
+
+        /// <summary>
+        /// Handles menu events in SAP Business One, specifically loading the TripPlanner form when the TripPlanner menu is clicked.
+        /// </summary>
+        /// <param name="pVal">The menu event details.</param>
+        /// <param name="BubbleEvent">Indicates whether the event should bubble up to other handlers.</param>
+        /// <exception cref="Exception">Thrown when form loading fails.</exception>
         private void SBO_Application_MenuEvent(ref SAPbouiCOM.MenuEvent pVal, out bool BubbleEvent)
         {
             BubbleEvent = true;
@@ -149,6 +166,14 @@ namespace tripPlanner
             }
         }
 
+
+        /// <summary>
+        /// Handles item events in SAP Business One forms, such as button presses and matrix link clicks, to trigger actions like loading data or opening forms.
+        /// </summary>
+        /// <param name="FormUID">The unique ID of the form triggering the event.</param>
+        /// <param name="pVal">The item event details.</param>
+        /// <param name="BubbleEvent">Indicates whether the event should bubble up to other handlers.</param>
+        /// <exception cref="Exception">Thrown when event processing fails.</exception>
         private void SBO_Application_ItemEvent(string FormUID, ref SAPbouiCOM.ItemEvent pVal, out bool BubbleEvent)
         {
             BubbleEvent = true;
@@ -215,6 +240,14 @@ namespace tripPlanner
               
             }
         }
+
+
+        /// <summary>
+        /// Saves data from the matrix in the specified form to the SAP Business One database, updating or adding records in the NTT_TOUR UDO and updating related order documents.
+        /// </summary>
+        /// <param name="oForm">The SAP Business One form containing the matrix with data to save.</param>
+        /// <param name="docEntries">Array of document entry IDs for orders.</param>
+        /// <exception cref="Exception">Thrown when saving data or updating orders fails.</exception>
         private void saveMatrix(SAPbouiCOM.Form oForm, int[] docEntries)
         {
             try
@@ -337,7 +370,13 @@ namespace tripPlanner
 
 
         }
-        
+
+        /// <summary>
+        /// Checks if the tour weight exceeds the vehicle capacity in the matrix and highlights rows in red if over the limit.
+        /// </summary>
+        /// <param name="oDT">The data table containing matrix data.</param>
+        /// <param name="matrix">The matrix UI component to apply color highlighting.</param>
+        /// <exception cref="Exception">Thrown when parsing weight values fails.</exception>
         private void checkIfOverLimit(DataTable oDT, Matrix matrix)
         {
             int red = (255 & 0xFF) | ((80 & 0xFF) << 8) | ((80 & 0xFF) << 16);
@@ -378,6 +417,13 @@ namespace tripPlanner
 
             }
         }
+
+
+        /// <summary>
+        /// Loads data into the matrix of the specified form based on user-defined filters and executes a query to retrieve tour planning data.
+        /// </summary>
+        /// <param name="oForm">The SAP Business One form containing the matrix to load data into.</param>
+        /// <exception cref="Exception">Thrown when query execution or data loading fails.</exception>
         private void LoadMatrix(SAPbouiCOM.Form oForm)
         {
             string rendszam = oForm.DataSources.UserDataSources.Item("UD_0").Value;
@@ -440,6 +486,14 @@ namespace tripPlanner
                 SBO_Application.StatusBar.SetText($"Query executed, {oDT.Rows.Count} rows loaded", BoMessageTime.bmt_Short, BoStatusBarMessageType.smt_Success);
             }
         }
+
+        /// <summary>
+        /// Retrieves the code associated with a given name from a specified SAP Business One user table.
+        /// </summary>
+        /// <param name="tableName">The name of the user table (e.g., @NTT_RENDSZAM).</param>
+        /// <param name="name">The name to search for in the table.</param>
+        /// <returns>The code associated with the name, or an empty string if not found.</returns>
+        /// <exception cref="Exception">Thrown when the query execution fails.</exception>
         private string GetCodeFromName(string tableName, string name)
         {
             Recordset oRs = (Recordset)globalD.oCompany.GetBusinessObject(BoObjectTypes.BoRecordset);
