@@ -341,7 +341,7 @@ namespace tripPlanner
                          oOrder.UserFields.Fields.Item("U_NTT_RENDSZAM").Value = rendszamCode;
                          oOrder.UserFields.Fields.Item("U_NTT_SOFOR").Value = soforCode;
                          oOrder.UserFields.Fields.Item("U_NTT_SZALLKOR").Value = szallkorCode;
-
+                           
 
                          // Mentsd a változásokat
                          if (oOrder.Update() != 0)
@@ -358,9 +358,10 @@ namespace tripPlanner
                      }
 
                 }
-
+                // matrix.LoadFromDataSource();
+                LoadMatrix(oForm);
                 // Űrlap frissítése
-                oForm.DataSources.DataTables.Item("DT_0").ExecuteQuery("SELECT * FROM [@NTT_TOUR] ORDER BY DocEntry");
+                //oForm.DataSources.DataTables.Item("DT_0").ExecuteQuery("SELECT * FROM [@NTT_TOUR] ORDER BY DocEntry");
             }
             catch (Exception ex)
             {
@@ -436,7 +437,11 @@ namespace tripPlanner
             SAPbouiCOM.DataTable oDT;
             oDT = oForm.DataSources.DataTables.Item("DT_0");
             oDT.Rows.Clear();
-
+            if(rendszamParam == "NULL" && szallKorParam == "NULL" && szallDatumParam == "NULL")
+            {
+                SBO_Application.StatusBar.SetText("Legalább egy szűrési feltételt adjon meg!", BoMessageTime.bmt_Short, BoStatusBarMessageType.smt_Success);
+                return;
+            }
 
             string query = $"EXEC NTT_TURATERVEZES @rendszam = {rendszamParam}, @szallKor = {szallKorParam}, @szallDatum = {szallDatumParam}";
             var oRs = (SAPbobsCOM.Recordset)globalD.oCompany.GetBusinessObject(BoObjectTypes.BoRecordset);
